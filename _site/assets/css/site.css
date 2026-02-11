@@ -53,13 +53,12 @@ a:hover { text-decoration: underline; }
   text-decoration: none;
 }
 
-.brand-mark {
-  width: 12px;
-  height: 12px;
-  border: 2px solid rgba(231,235,242,0.85);
-  border-right-color: rgba(159,183,255,0.85);
-  border-radius: 999px;
+.brand-logo {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
   display: inline-block;
+  border-radius: 4px;
 }
 
 .brand-text {
