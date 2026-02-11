@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact</title>
+  <meta name="description" content="Contact Elapsd support." />
+
+  <!-- Open Graph (optional but nice for sharing) -->
+  <meta property="og:title" content="Contact" />
+  <meta property="og:description" content="Contact Elapsd support." />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="/assets/css/site.css" />
+</head>
+<body>
+  <header class="topbar">
+  <div class="container topbar-inner">
+    <a class="brand" href="/">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text">Elapsd</span>
+    </a>
+
+    <nav class="nav">
+      <a href="/privacy/">Privacy</a>
+      <a class="button" href="/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+  <main class="container">
+    <article class="card">
+      <h1>Contact</h1>
+<p>If you found a bug, have a question, or want to suggest a feature, send a message here.</p>
+<div class="panel">
+  <p class="muted">
+    <strong>Support note:</strong> Elapsd is a free side project. Support is best-effort.
+    If something is genuinely broken, I’ll probably want to fix it anyway (because I use it too).
+  </p>
+</div>
+<form
+  name="contact"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  action="/thanks/">
+  <input type="hidden" name="form-name" value="contact" />
+  <p class="hidden">
+    <label>Don’t fill this out: <input name="bot-field" /></label>
+  </p>
+  <label>
+    Name
+    <input name="name" autocomplete="name" required />
+  </label>
+  <label>
+    Email
+    <input name="email" type="email" autocomplete="email" required />
+  </label>
+  <label>
+    Message
+    <textarea name="message" rows="7" required></textarea>
+  </label>
+<p><button type="submit">Send</button></p>
+  <p class="muted">
+    Please don’t include sensitive personal information. 
+  </p>
+</form>
+
+    </article>
+  </main>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Expanded screenshot viewer">
+      <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close screenshot viewer">Close</button>
+      <button class="lightbox-nav lightbox-prev" id="lightbox-prev" type="button" aria-label="Previous screenshot">Previous</button>
+      <img class="lightbox-image" id="lightbox-image" src="" alt="" />
+      <button class="lightbox-nav lightbox-next" id="lightbox-next" type="button" aria-label="Next screenshot">Next</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+  <div class="container footer-inner">
+    <p class="muted">© 2026 Elapsd. Built with minimal fuss.</p>
+  </div>
+</footer>
+
+  <script type="module" src="/assets/js/lightbox.js"></script>
+</body>
+</html>

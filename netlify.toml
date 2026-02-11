@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  publish = "_site"
+
+# Optional: basic hardening headers (fine for static brochure sites)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer-when-downgrade"
