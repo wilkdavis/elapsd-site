@@ -7,27 +7,24 @@ description: A calm, simple time tracker for real life.
 # Elapsd
 
 <p class="lead">
-A simple time-since tracker for real life. Just “how long has it been since I.... ?”
+A simple time-since tracker to answer “How long has it been since I.... ?”
 </p>
 
 <div class="hr"></div>
 
 ## Features
 
-<div class="grid cols-3">
-  <div class="panel">
-    <h3>One-tap tracking</h3>
-    <p class="muted">Log an event quickly without turning your life into a spreadsheet.</p>
-  </div>
-  <div class="panel">
-    <h3>At-a-glance time since</h3>
-    <p class="muted">See elapsed time clearly so you can make decisions without mental math.</p>
-  </div>
-  <div class="panel">
-    <h3>Quiet by design</h3>
-    <p class="muted">No urgency vibes. Just clean info that helps you stay consistent.</p>
-  </div>
-</div>
+- Quick Add, Add, and Skip logging flows
+- Optional minimum or maximum intervals per event
+- Calm caution/overdue visual status
+- Event organization with categories
+- Search/filter/sort support in event management
+- Reports with per-event time-range analysis
+- CSV export of log history
+- Local-first storage with iCloud sync via CloudKit
+- Offline support with sync status visibility
+
+<div class="hr"></div>
 
 ## Screenshots - macOS
 
@@ -71,27 +68,87 @@ A simple time-since tracker for real life. Just “how long has it been since I.
 
 <div class="hr"></div>
 
+## Use Cases
+
+You're welcome to use it however you want :-) But, I get it... an example or two might make more sense.
+
+### Interval Type: Minimum
+
+This was my original use case and why I wrote this. I take Tylenol fairly often, for _reasons that's don't matter here_. There are dosage recommendations with 4hr time limits between them. So, when I reach for the Tylenol, it's nice to know how long ago I last took them. My method for tracking that has been:
+
+1. switch over to my notepad in vscode
+2. search for "tylenol"
+3. look at the last entry
+4. do the math in my head to know how long it's been
+5. "cmd-shift-i" (to insert a new datetime stamp)
+
+It works, but it's not great. Now, I:
+
+1. switch to Elapsd
+2. type 'ty' in the search
+3. click _Quick Add_
+
+If it's been less than 4 hours since the last time I logged it, I get a warning asking if I'm sure, and can continue (against their recommendations) or try to wait. No thinking, no doing the math in my head.
+
+That uses the Interval type _Minimum_, with _4_ for the Interval and _Hours_ for the Duration.
+
+**Use for anything you want to log that shouldn't be done more often than the interval you configure.**
+
+<div class="hr"></div>
+
+### Interval Type: Maximum
+
+I use this for things that _should_ be done every so often, but aren't important enough to go in my calendar. For example, you should change your toothbrush at least every 3 months. (sooner if you've been sick, the bristles are frayed, etc)
+
+- Event: Change toothbrush
+- Interval Type: Maximum
+- Interval: 12
+- Duration: weeks
+
+The last logged text changes throughout the interval:
+
+- 6 weeks ago
+- 11 weeks ago (approaching limit) _yellow text_
+- 12 weeks ago (overdue) _red text_
+
+So it's easy to see at a glance if something is upcoming or overdue.
+(this is on desktop - iOS has slightly different visual cues)
+
+<p>If you have notifications enabled (in Settings), you'll get a notification when it's overdue.</p>
+
+**Replace the filter in your HVAC. Change the filter in your humidifier. Water your plants. Call your mom.**
+
+<div class="hr"></div>
+
+### Interval Type: None
+
+This for things you might want to log occasionally but there's no regular minimum or maximum interval. I don't really know what I'll use this for... for purely one-off events I'd probably put them somewhere else (a markdown journal entry in my Notes repo, most likely). I added it thinking I might want it, so someday I'll probably figure out a use for it.
+
+<div class="hr"></div>
+
 ## FAQ
 
-<div class="grid cols-2">
-  <div class="panel">
-    <h3>Is it free?</h3>
-    <p class="muted">Yep. It's just something I knocked out for myself to use, not something worth charging for.</p>
-  </div>
+<details>
+<summary> Is it free? </summary>
+<p>Yep. It's just something I knocked out for myself to use, not something worth charging for.</p>
+</details>
 
-  <div class="panel">
-    <h3>Does it collect my data?</h3>
-    <p class="muted">The short version: no creepy stuff. See the full <a href="/privacy/">Privacy Policy</a> for specifics.</p>
-  </div>
+<details>
+<summary> Does it collect my data? </summary>
+<p>The short version: not if I can help it. I don't want your data, I hate ads in apps, and I don't care about analytics. See the full <a href="/privacy/">Privacy Policy</a> for specifics.</p>
+</details>
 
-  <div class="panel">
-    <h3>Can I request features?</h3>
-    <p class="muted">Sure. It's a side project so no promises, but I do read messages.</p>
-  </div>
+<details>
+<summary> Can I request features? </summary>
+    <p> Sure. It's a side project so no promises, but I do read messages.</p>
+</details>
 
-  <div class="panel">
-    <h3>Where do I get help?</h3>
-    <p class="muted">Start with the <a href="/contact/">Contact</a> page. If it’s a real bug, I’ll want to fix it anyway.</p>
-  </div>
+<details>
+<summary>Is this open source?</summary>
+<p> Not currently; the repo is private. Mostly just because all my repos are private/force of habit. If you really want the source <a href="/contact/">contact me</a></p>
+</details>
 
-</div>
+<details>
+<summary>Was AI used in creating this?</summary>
+<p> Yes. My background/experience is PHP and Laravel, not Swift. I started the project with Claude and it went ... ok, but not great. When Codex 5.2 dropped, I tried it to see if it could fix some things Claude struggled with. It worked, then Codex 5.3 came along and just blasted through wrapping it up.</p>
+</details>

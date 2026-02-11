@@ -120,6 +120,62 @@ h3 { font-size: 18px; }
   background: rgba(20,25,34,0.72);
 }
 
+details {
+  margin: 14px 0;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(20,25,34,0.72);
+  overflow: clip;
+}
+
+summary {
+  position: relative;
+  padding: 12px 44px 12px 14px;
+  cursor: pointer;
+  font-weight: 650;
+  list-style: none;
+  transition: background-color 160ms ease;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid rgba(231,235,242,0.72);
+  border-bottom: 2px solid rgba(231,235,242,0.72);
+  transform: translateY(-60%) rotate(45deg);
+  transition: transform 160ms ease;
+}
+
+details[open] > summary::after {
+  transform: translateY(-35%) rotate(225deg);
+}
+
+summary:hover {
+  background: rgba(159,183,255,0.10);
+}
+
+summary:focus-visible {
+  outline: 2px solid rgba(159,183,255,0.65);
+  outline-offset: -2px;
+}
+
+details > :not(summary) {
+  margin: 0;
+  padding: 0 14px 14px;
+}
+
+details > :not(summary) + :not(summary) {
+  margin-top: 10px;
+}
+
 .muted { color: var(--muted); }
 
 .hr {
