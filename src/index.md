@@ -144,11 +144,6 @@ This for things you might want to log occasionally but there's no regular minimu
 </details>
 
 <details>
-<summary>Is this open source?</summary>
-<p> Not currently; the repo is private. Mostly just because all my repos are private/force of habit. If you really want the source <a href="/contact/">contact me</a></p>
-</details>
-
-<details>
 <summary>Was AI used in creating this?</summary>
-<p> Yes. My background/experience is PHP and Laravel, not Swift. I started the project with Claude and it went ... ok, but not great. When Codex 5.2 dropped, I tried it to see if it could fix some things Claude struggled with. It worked, then Codex 5.3 came along and just blasted through wrapping it up.</p>
+<p> Yes. My background/experience is PHP & Laravel not Swift, so I leaned on Codex.</p>
 </details>
