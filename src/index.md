@@ -142,8 +142,3 @@ This for things you might want to log occasionally but there's no regular minimu
 <summary> Can I request features? </summary>
     <p> Sure. It's a side project so no promises, but I do read messages.</p>
 </details>
-
-<details>
-<summary>Was AI used in creating this?</summary>
-<p> Yes. My background/experience is PHP & Laravel not Swift, so I leaned on Codex.</p>
-</details>
